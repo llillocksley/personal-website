@@ -105,3 +105,17 @@ nav ul li a.active {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.progress-bar{
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.progress{
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease-in-out;
+}

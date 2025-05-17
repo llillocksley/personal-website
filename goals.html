@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Goals | emeka Locksley</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="goals-page">
   <header>
@@ -23,29 +24,50 @@
   </nav>
 
   <main class="goals-section">
-    <section class="goal">
+    <section class="goal" data-aos="fade-up">
       <h2><span>💻</span> Tech Growth</h2>
       <p>Continue learning HTML, CSS, and JavaScript. Build real projects and improve GitHub profile daily.</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 40%;"></div>
+      </div>
     </section>
 
-    <section class="goal">
+    <section class="goal" data-aos="fade-up">
       <h2><span>🚛</span> Transport Innovation</h2>
       <p>Develop solutions for logistics and fleet management in Nigeria. Build tools that save cost and time.</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 40%;"></div>
+      </div>
     </section>
 
-    <section class="goal">
+    <section class="goal" data-aos="fade-up">
       <h2><span>📈</span> Brand & Network</h2>
       <p>Build a solid personal brand online. Connect with mentors in tech, and oil & gas industries.</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 40%;"></div>
+      </div>
     </section>
 
-    <section class="goal">
+    <section class="goal" data-aos="fade-up">
       <h2><span>💡</span> Product Launch</h2>
       <p>Publish and scale your first software product before the year ends.</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 40%;"></div>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>Reach out: <a href="mailto:emekalocksley@gmail.com">emekalocksley@gmail.com</a> | <a href="https://www.linkedin.com/in/emeka-goodness-locksley" target="_blank">LinkedIn</a></p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        duration: 1000, // animation duration in ms
+        easing: 'ease-in-out',
+        once: true, // weather animation should happen only once
+    });
+  </script>
 </body>
 </html>
