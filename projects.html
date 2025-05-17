@@ -54,7 +54,7 @@
     }
 
     .project-card {
-      background: white;
+      background: rgb(189, 170, 170);
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -111,24 +111,32 @@
 
   <div class="container">
     <h1>My Projects</h1>
-    <div class="filters">
-        <button onclick="filterProjects('all')">All</button>
-        <button onclick="filterProjects('web')">Web</button>
-        <button onclick="filterProjects('transport')">Transport</button>
-        <button onclick="filterProjects('legal')">Legal</button>
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="web">Web Apps</button>
+        <button data-filter="trsnsport">Transport</button>
+        <button data-filter="legal">Legal</button>
+        <button data-filter="data">Data-Driven</button> <!-- your new category -->
     </div>
-    <div class="projects-grid">
-      <div class="project-card" data-category="web">
+
+    <!-- Projects Grid -->
+    <div class="project-grid">
+      <div class="project" data-category="web">
         <h3>Personal Website</h3>
         <p>This portfolio showcases my growth as a web developer.</p>
       </div>
-      <div class="project-card" data-category="transport">
+      <div class="project" data-category="transport">
         <h3>Transport Cost Tracker</h3>
         <p>A planned app for tracking and analyzing transportation expenses.</p>
       </div>
-      <div class="project-card" data-category="legal">
+      <div class="project" data-category="legal">
         <h3>Legal Docs Formatter</h3>
         <p>Concept project to help organize and style legal documentation.</p>
+      </div>
+      <div class="project" data-category="data">
+        <h3>Data-Driven Decision Making</h3>
+        <p>I leverage data analytics to create software that helps businesses make smarter, faster decisions in transport and legal operations</p>
       </div>
     </div>
   </div>
