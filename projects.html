@@ -75,22 +75,25 @@
       cursor: pointer;
       border-radius: 4px;
     }
-    .filters{
-        text-align: center;
-        margin-bottom: 2rem;
-        .filters button{
-            margin: 0,0.5rem;
-            padding: 0.5rem 1rem;
-            border: none;
-            background: #004466;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .filters button:hover{
-            background: #0077aa;
-        }
-    }
+    .filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filters button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #004466;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: #0077aa;
+}
+
   </style>
 </head>
 <body>
@@ -134,7 +137,7 @@
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
-    function filterProjects(category){
+    function filterProjects(category) {
         const cards = document.querySelectorAll('.project-card');
         cards.forEach(card => {
             const match = card.dataset.category === category || category === 'all';
