@@ -81,3 +81,27 @@ nav ul li a.active {
   font-weight: bold;
   border-bottom: 2px solid #0a58ca;
 }
+.goals h2{
+  font-size: 1,6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.goals h2::before{
+  content:  "🚀";
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.goal:hover h2::before{
+  transform: rotate(10deg) scale(1.1);
+}
+@media (min-width: 768px){
+  .goals-section{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px){
+  .goals-section{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
