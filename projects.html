@@ -3,45 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Emeka Locksley</title>
+  <title>My Projects | Emeka Locksley</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    nav {
+      background-color: #004466;
+      color: white;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .toggle-btn {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .filters{
+        text-align: center;
+        margin-bottom: 2rem;
+        .filters button{
+            margin: 0,0.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background: #004466;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .filters button:hover{
+            background: #0077aa;
+        }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>My Projects</h1>
-    <p>Explore the work I'm doing to merge tech, law, and transport.</p>
-  </header>
-
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="goals.html">Goals</a></li>
       <li><a href="projects.html">Projects</a></li>
+      <li><a href="goals.html">Goals</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <main class="projects-section">
-    <section class="project-card">
-      <h2>Personal Website</h2>
-      <p>A live portfolio showcasing my growth in web development and software design.</p>
-      <a href="https://llillocksley.github.io/personal-website/" target="_blank">View Project</a>
-    </section>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-    <section class="project-card">
-      <h2>Transport Cost Tracker</h2>
-      <p>A web app (in progress) designed to track and optimize fuel usage and transportation costs.</p>
-    </section>
+  <div class="container">
+    <h1>My Projects</h1>
+    <div class="filters">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web')">Web</button>
+        <button onclick="filterProjects('transport')">Transport</button>
+        <button onclick="filterProjects('legal')">Legal</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-category="web">
+        <h3>Personal Website</h3>
+        <p>This portfolio showcases my growth as a web developer.</p>
+      </div>
+      <div class="project-card" data-category="transport">
+        <h3>Transport Cost Tracker</h3>
+        <p>A planned app for tracking and analyzing transportation expenses.</p>
+      </div>
+      <div class="project-card" data-category="legal">
+        <h3>Legal Docs Formatter</h3>
+        <p>Concept project to help organize and style legal documentation.</p>
+      </div>
+    </div>
+  </div>
 
-    <section class="project-card">
-      <h2>Legal Docs Formatter</h2>
-      <p>A tool (planned) to help automate and format legal documents for better productivity.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>📧 emekalocksley@gmail.com | 🌐 <a href="https://www.linkedin.com/in/emeka-goodness-locksley" target="_blank">LinkedIn</a></p>
-  </footer>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+    function filterProjects(category){
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            const match = card.dataset.category === category || category === 'all';
+            card.style.display = match ? 'block' : 'none';
+        });
+    }
+  </script>
 </body>
 </html>
