@@ -1,121 +1,119 @@
+/* General */
 body {
-  font-family: Arial, sans-serif;
-  margin: 2rem;
-  background: #f8f8f8;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
   color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-  background: #2d3748;
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navigation */
+nav {
+  background-color: #004466;
   color: white;
   padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
 }
 
-section {
-  margin-top: 2rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-footer {
-  margin-top: 2rem;
-  text-align: center;
-  color: #555;
-}
-nav{
-  background-color: #333;
-  padding: 10px;
-}
-nav ul{
-  list-style-type: none;
+nav ul {
+  list-style: none;
   display: flex;
+  gap: 1rem;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
-nav ul li{
-  margin: 0 15px;
-}
-nav ul li a{
+
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-nav ul li a:hover{
-  text-decoration: underline;
-}
-body.goals-page {
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
-  color: #222;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
-.goals-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
   padding: 2rem;
 }
 
-.goal {
-  background-color: #ffffffdd;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
+/* Toggle Button */
+.toggle-btn {
+  margin: 1rem auto;
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.goal:hover {
-  transform: translateY(-5px);
-  background-color: #f8f9fa;
+/* Filter Buttons */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-nav ul li a.active {
-  color: #0a58ca;
-  font-weight: bold;
-  border-bottom: 2px solid #0a58ca;
+.filter-buttons button {
+  background: #eee;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-.goals h2{
-  font-size: 1,6rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background: #4fc3f7;
+  color: white;
 }
-.goals h2::before{
-  content:  "🚀";
-  display: inline-block;
-  transition: transform 0.3s ease;
+
+/* Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
-.goal:hover h2::before{
-  transform: rotate(10deg) scale(1.1);
+
+/* Project Cards */
+.project {
+  background: rgb(189, 170, 170);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
-@media (min-width: 768px){
-  .goals-section{
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(79, 195, 247, 0.4);
+  background-color: #fafafa;
 }
-@media (min-width: 1024px){
-  .goals-section{
-    grid-template-columns: repeat(3, 1fr);
-  }
+
+body.dark-mode .project:hover {
+  background-color: #1a1a1a;
 }
-.progress-bar{
-  background-color: #ddd;
-  border-radius: 10px;
-  height: 20px;
-  width: 100%;
-  margin-top: 10px;
-  overflow: hidden;
+
+/* Optional: Dark Mode Header/Footer Tweaks */
+body.dark-mode header,
+body.dark-mode nav {
+  background: #1e1e1e;
+  color: #eee;
 }
-.progress{
-  height: 100%;
-  background: linear-gradient(90deg, #4caf50, #81c784);
-  border-radius: 10px 0 0 10px;
-  transition: width 1s ease-in-out;
+
+body.dark-mode footer {
+  color: #aaa;
 }
