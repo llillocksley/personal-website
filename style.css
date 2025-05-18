@@ -117,3 +117,14 @@ body.dark-mode nav {
 body.dark-mode footer {
   color: #aaa;
 }
+
+.project-card a {
+  color: #004466;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
