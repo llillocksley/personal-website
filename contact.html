@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Emeka Locksley</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="goals.html">Goals</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dark Mode Toggle -->
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <!-- Contact Section -->
+<section class="contact-section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="contact-description">Have a project, collaboration, or just want to say hi? I’d love to hear from you.</p>
+
+    <form class="contact-form" action="mailto:emekalocksley@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="quick-contact">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:emekalocksley@gmail.com">emekalocksley@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/llillocksley" target="_blank">github.com/llillocksley</a></p>
+      <!-- Optional WhatsApp -->
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/234XXXXXXXXXX" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Let's Collaborate Section -->
+  <section style="text-align: center; padding: 4rem 1rem;" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-aos="fade-up">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Let’s Collaborate</h2>
+    <p style="max-width: 600px; margin: auto; font-size: 1rem;">
+      Whether it’s a one-time gig, long-term partnership, or just an exciting idea — I’m always open to meaningful collaboration. Reach out, and let’s build something impactful together.
+    </p>
+    <a href="mailto:emekalocksley@gmail.com" 
+       style="display: inline-block; margin-top: 1.5rem; background-color: #1e3a8a; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: bold; text-decoration: none;"
+       onmouseover="this.style.backgroundColor='#3b82f6'" 
+       onmouseout="this.style.backgroundColor='#1e3a8a'">
+      Start a Conversation
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Emeka Locksley. All rights reserved.</p>
+      <p>Built with 💻, passion, and continuous learning.</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:emekalocksley@gmail.com">Email</a> |
+      <a href="https://github.com/llillocksley" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    const form = document.querySelector('.contact-form');
+    const status = document.getElementById('form-status');
+
+    if(form) {
+      form.addEventListener('submit' , async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {Accept: 'application/json' }
+        });
+
+        if (response.ok) {
+          status.stylecontent = "Message sent! ✅";
+          status.style.color = "green";
+          form.reset();
+        } else {
+          status.textContent = "Oops! Something went wrong. ❌";
+          status.style.color = "red";
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>

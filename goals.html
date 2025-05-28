@@ -2,71 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Goals | emeka Locksley</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Goals | Emeka Locksley</title>
+  <link href="style.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="goals-page">
-  <header>
-    <h1>My Goals</h1>
-    <p>Focused Vision. Daily Action.</p>
+<body class="page-body">
+  <!-- Header / Navigation -->
+  <header class="site-header" data-aos="fade-down">
+    <h1 class="header-title">🎯 My Core Goals</h1>
+    <p class="header-subtitle">Focused Vision. Daily Action. A roadmap toward impact, innovation, and growth.</p>
+    <button class="dark-mode-toggle">Toggle Dark Mode</button>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="goals.html" class="active">Goals</a></li>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="goals.html" class="nav-link active">Goals</a></li>
     </ul>
   </nav>
 
-  <main class="goals-section">
-    <section class="goal" data-aos="fade-up">
-      <h2><span>💻</span> Tech Growth</h2>
-      <p>Continue learning HTML, CSS, and JavaScript. Build real projects and improve GitHub profile daily.</p>
+  <!-- Main Goals Section -->
+  <main class="main-content">
+    <section class="goal-card" data-aos="fade-up">
+      <h2 class="goal-title"><span class="goal-icon">💻</span> Tech Growth</h2>
+      <p class="goal-description">Continue learning HTML, CSS, and JavaScript. Build real projects and improve GitHub profile daily.</p>
       <div class="progress-bar">
-        <div class="progress" style="width: 40%;"></div>
+        <div class="progress-fill tech-growth" style="width: 40%;">40%</div>
       </div>
     </section>
 
-    <section class="goal" data-aos="fade-up">
-      <h2><span>🚛</span> Transport Innovation</h2>
-      <p>Develop solutions for logistics and fleet management in Nigeria. Build tools that save cost and time.</p>
+    <section class="goal-card" data-aos="fade-up">
+      <h2 class="goal-title"><span class="goal-icon">🚛</span> Transport Innovation</h2>
+      <p class="goal-description">Develop solutions for logistics and fleet management in Nigeria. Build tools that save cost and time.</p>
       <div class="progress-bar">
-        <div class="progress" style="width: 40%;"></div>
+        <div class="progress-fill transport-innovation" style="width: 40%;">40%</div>
       </div>
     </section>
 
-    <section class="goal" data-aos="fade-up">
-      <h2><span>📈</span> Brand & Network</h2>
-      <p>Build a solid personal brand online. Connect with mentors in tech, and oil & gas industries.</p>
+    <section class="goal-card" data-aos="fade-up">
+      <h2 class="goal-title"><span class="goal-icon">📈</span> Brand & Network</h2>
+      <p class="goal-description">Build a solid personal brand online. Connect with mentors in tech, and oil & gas industries.</p>
       <div class="progress-bar">
-        <div class="progress" style="width: 40%;"></div>
+        <div class="progress-fill brand-network" style="width: 40%;">40%</div>
       </div>
     </section>
 
-    <section class="goal" data-aos="fade-up">
-      <h2><span>💡</span> Product Launch</h2>
-      <p>Publish and scale your first software product before the year ends.</p>
+    <section class="goal-card" data-aos="fade-up">
+      <h2 class="goal-title"><span class="goal-icon">💡</span> Product Launch</h2>
+      <p class="goal-description">Publish and scale your first software product before the year ends.</p>
       <div class="progress-bar">
-        <div class="progress" style="width: 40%;"></div>
+        <div class="progress-fill product-launch" style="width: 40%;">40%</div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>Reach out: <a href="mailto:emekalocksley@gmail.com">emekalocksley@gmail.com</a> | <a href="https://www.linkedin.com/in/emeka-goodness-locksley" target="_blank">LinkedIn</a></p>
+  <!-- Milestones -->
+  <section class="milestones" data-aos="zoom-out">
+    <div class="milestone-item">
+      <h3 class="milestone-title milestone-success">🚀 Launched Personal Website</h3>
+      <p class="milestone-date">May 2025 – Built and deployed a responsive portfolio.</p>
+    </div>
+    <div class="milestone-item">
+      <h3 class="milestone-title milestone-warning">📈 Completed CPA Funnel Projects</h3>
+      <p class="milestone-date">April 2025 – Built optimized affiliate marketing funnels.</p>
+    </div>
+    <div class="milestone-item">
+      <h3 class="milestone-title milestone-info">🧠 Advanced Transport Systems</h3>
+      <p class="milestone-date">March 2025 – Added smart features to logistics dashboard.</p>
+    </div>
+  </section>
+
+  <!-- Focused Areas -->
+  <section class="focused-areas" data-aos="fade-up">
+    <h2 class="section-title">Focused Areas This Quarter</h2>
+    <div class="focused-grid">
+      <div class="focus-card js-mastery">
+        <h3>⚙️ JavaScript Mastery</h3>
+        <p>Daily practice, build mini apps, and solve 50+ challenges.</p>
+      </div>
+      <div class="focus-card product-idea">
+        <h3>📦 Real Product Idea</h3>
+        <p>Draft MVP for your logistics software concept.</p>
+      </div>
+      <div class="focus-card online-presence">
+        <h3>📱 Online Presence</h3>
+        <p>Weekly LinkedIn content. Share value + progress.</p>
+      </div>
+      <div class="focus-card networking">
+        <h3>💬 Networking</h3>
+        <p>Reach out to 3 new mentors or tech communities monthly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestone Tracker -->
+  <section class="milestone-tracker" data-aos="fade-up">
+    <h2 class="section-title">Milestone Tracker</h2>
+    <ul class="tracker-list">
+      <li class="tracker-item done">✅ Launch Personal Website <span class="status done-status">[Done]</span></li>
+      <li class="tracker-item progress">⏳ Add First Public Project to GitHub <span class="status progress-status">[In Progress]</span></li>
+      <li class="tracker-item upcoming">🔜 Launch MVP Transport App <span class="status upcoming-status">[Upcoming]</span></li>
+      <li class="tracker-item upcoming">📢 Share Case Study on LinkedIn <span class="status upcoming-status">[Upcoming]</span></li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action" data-aos="zoom-in">
+    <h2>Follow My Progress</h2>
+    <p>Stay tuned as I turn these goals into real-world results. My journey is just beginning.</p>
+    <a href="projects.html" class="btn-primary">See My Projects</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Emeka Locksley. All rights reserved.</p>
+    <p>Built with 💻, passion, and continuous learning.</p>
+    <div class="footer-links">
+      <a href="mailto:emekalocksley@gmail.com">Email</a> |
+      <a href="https://github.com/llillocksley" target="_blank" rel="noopener">GitHub</a>
+    </div>
   </footer>
 
+  <!-- AOS Init -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-        duration: 1000, // animation duration in ms
-        easing: 'ease-in-out',
-        once: true, // weather animation should happen only once
+    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+  </script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggleButton = document.querySelector('.dark-mode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
     });
   </script>
 </body>
