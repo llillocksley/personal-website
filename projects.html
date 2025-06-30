@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Projects | Emeka Locksley</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -219,32 +222,240 @@
   }
 }
 
+.hero-banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #004466, #0077aa);
+  color: white;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 2rem;
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.projects-hero {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imgforabout/project-bg.jpg') no-repeat center center/cover;
+  height: 60vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.projects-hero .overlay {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.projects-hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.project-stats {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.stat-box {
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  background-color: #004466;
+  color: #fff;
+}
+
+.stat-box i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #004466;
+}
+
+.stat-box:hover i {
+  color: #fff;
+}
+
+.stat-box h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.project-filter {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #eaf4f4;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004466;
+}
+
+.filter-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #004466;
+  background-color: transparent;
+  color: #004466;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag:hover,
+.tag.active {
+  background-color: #004466;
+  color: #fff;
+}
+
   </style>
 </head>
 <body>
-  <nav>
+
+    <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="goals.html">Goals</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  
+<!-- Hero Banner -->
+<section class="hero-banner" data-aos="fade-up">
+  <h1>My Projects</h1>
+  <p>Explore a showcase of practical solutions and creative implementations crafted to solve real-world problems.</p>
+</section>
 
-  <div class="container">
-    <h1>My Projects</h1>
+<!-- Hero Header with Overlay -->
+<header class="projects-hero">
+  <div class="overlay">
+    <h1 data-aos="fade-down">My Work & Projects</h1>
+    <p data-aos="fade-up">Solutions, Innovation, and Impact — A showcase of my hands-on experience and ideas</p>
+  </div>
+</header>
 
-    <!-- Filter Buttons -->
-    <div class="filter-buttons">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="web">Web Apps</button>
-      <button data-filter="transport">Transport</button>
-      <button data-filter="legal">Legal</button>
-      <button data-filter="data">Data</button>
+<!-- Project Stats Section -->
+<section class="project-stats" data-aos="fade-up">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <i class="fas fa-laptop-code"></i>
+      <h3>6+</h3>
+      <p>Completed Projects</p>
     </div>
+    <div class="stat-box">
+      <i class="fas fa-cogs"></i>
+      <h3>8</h3>
+      <p>Tools & Technologies</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-briefcase"></i>
+      <h3>3</h3>
+      <p>Ongoing Projects</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-sold"></i>
+      <h3>3+</h3>
+      <p>Collaborations</p>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Section -->
+<section class="project-filter container" data-aos="fade-up">
+  <h2 class="section-heading">Explore by Category</h2>
+  <div class="filter-tags">
+    <button data-filter="all" class="tag active">All</button>
+    <button data-filter="web" class="tag">Web Apps</button>
+    <button data-filter="transport" class="tag">Transport</button>
+    <button data-filter="legal" class="tag">Legal</button>
+    <button data-filter="data" class="tag">Data</button>
+  </div>
+</section>
+
+<!-- Project Grid -->
+<div class="container">
+  <div class="project-grid" data-aos="fade-up">
+    <div class="project" data-category="web" data-aos="fade-up">
+      <img src="https://picsum.photos/300/200?random=1" alt="Responsive Portfolio Project">
+      <h3>Responsive Portfolio</h3>
+      <p>A sleek portfolio site built using HTML, CSS & JavaScript.</p>
+      <a href="portfolio.html" class="btn" target="_blank">View Demo</a>
+    </div>
+
+    <div class="project" data-category="transport" data-aos="fade-up">
+      <img src="https://picsum.photos/300/200?random=2" alt="Fleet Tracker Project">
+      <h3>Fleet Tracker</h3>
+      <p>A dashboard for monitoring transport and delivery operations.</p>
+      <a href="fleet-tracker.html" class="btn" target="_blank">View Demo</a>
+    </div>
+
+    <div class="project" data-category="legal" data-aos="fade-up">
+      <img src="https://picsum.photos/300/200?random=4" alt="Case Organizer Project">
+      <h3>Case Organizer</h3>
+      <p>Helps legal teams manage and categorize documents efficiently.</p>
+      <a href="case-organizer.html" class="btn" target="_blank">View Demo</a>
+    </div>
+
+    <div class="project" data-category="data" data-aos="fade-up">
+      <img src="https://picsum.photos/300/200?random=3" alt="Data Visualizer Project">
+      <h3>Data Visualizer</h3>
+      <p>Turns raw data into interactive and easy-to-read charts.</p>
+      <a href="data-visualizer.html" class="btn" target="_blank">View Demo</a>
+    </div>
+  </div>
+</div>
+
+
     <!-- Featured Work Section -->
      <section class="featured-work" data-aos="zoom-in-up">
       <h2>Featured Work</h2>
@@ -291,60 +502,113 @@
         <img src="imgforabout/Data.jpg" alt="Data-Driven Decision Making" />
         <h3><i class="fas fa-chart-line"></i> Data-Driven Decision Making</h3>
         <p>I leverage data analytics to help businesses make smarter decisions in transport and legal operations.</p>
-        <a href="#" target="_blank" class="btn">Read More</a>
+        <a href="data-driven-decision.html" target="_blank" class="btn">Read More</a>
       </div>
     </div>
   </div>
 
-  <!-- Dark Mode Script -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
+<!-- Dark Mode & Filter Script -->
+<script>
+  // Toggle Dark Mode
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
 
-    function filterProjects(category) {
-      const cards = document.querySelectorAll('.project');
-      cards.forEach(card => {
-        const match = category === 'all' || card.dataset.category === category;
-        card.style.display = match ? 'block' : 'none';
-      });
-    }
+  // Project Filter Functionality
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.project');
+    cards.forEach(card => {
+      const match = category === 'all' || card.dataset.category === category;
+      card.style.display = match ? 'block' : 'none';
+    });
+  }
 
-    document.querySelectorAll('.filter-buttons button').forEach(button => {
+  // Filter Button Click Handling
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-tags .tag');
+    filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         const category = button.getAttribute('data-filter');
         filterProjects(category);
-        document.querySelectorAll('.filter-buttons button').forEach(btn => btn.classList.remove('active'));
+
+        filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
       });
     });
-  </script>
+  });
+</script>
 
-  <!-- AOS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
+<!-- AOS Animation Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
 
-  <footer class="site-footer">
-    <div class="footer-content">
+
+  <!-- Footer -->
+   <footer class="site-footer">
+    <div class="footer-graph-container">
+      <div class="footer-box">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="fleet-tracker.html">Fleet Tracker</a></li>
+          <li><a href="#">Vehicle Reports</a></li>
+          <li><a href="#">Driver Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="goals.html">Visions & Goals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Portfolio</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Demo Showcase</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Connects</h4>
+        <ul>
+          <li><a href="mailto:emekalocksley@gmail.com">Email</a></li>
+          <li><a href="https://github.com/llillocksley" target="_blank">GitHub</a></li>
+          <li><a href="https://wa.me/+2348139222806" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-box social-box">
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+          <a href="https://twitter.com/llillocksley" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/lillocksley" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/Emeka Goodness Locksley" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="http://web.whatsapp.com/+2348139222806" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="http://pinterest.com/lillocksley" target="_blank" aria-label="Pinterest">
+            <i class="fab fa-pinterest"></i>
+          </a> 
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
       <p>&copy; 2025 Emeka Locksley. All rights reserved.</p>
       <p>Built with 💻, passion, and continuous learning.</p>
-    </div>
-    <div class="footer-links">
-      <a href="mailto:emekalocksley@gmail.com">Email</a> |
-      <a href="https://github.com/llillocksley" target="_blank">GitHub</a>
     </div>
   </footer>
 </body>
 </html>
-"""
-
-# Save as HTML then convert to PDF
-html_file_path = Path("/mnt/data/projects.html")
-html_file_path.write_text(html_content)
-
-html_file_path.name  # return the file name for downloading by user later

@@ -3,312 +3,310 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>About Me | Emeks $$$</title>
-  <meta name="description" content="Learn more about Emeks $$$ — a creative web developer with a passion for building sleek, responsive websites.">
-  <meta name="keywords" content="Emeks $$$, about Emeka, personal info, frontend developer, Ocean State Nigeria, web portfolio">
-  <meta name="author" content="Emeks $$$">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="About Me | Emeks $$$">
-  <meta property="og:description" content="Meet Emeks $$$, a frontend developer focused on creative and responsive websites.">
-  <meta property="og:image" content="https://llillocksley.github.io/personal-website/assets/images/preview.png">
-  <meta property="og:url" content="https://llillocksley.github.io/personal-website/about.html">
-  <meta property="og:type" content="profile">
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
-  <!-- Font Awesome (optimized) -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
-
-  <!-- Main CSS -->
+  <title>About - Emeka Locksley</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      padding: 1rem 2rem;
-      background-color: #004466;
-      margin: 0;
-      justify-content: center;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #a0d8ef;
-    }
-
-    .about-container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .about-image {
-      flex: 1 1 250px;
-      text-align: center;
-    }
-
-    .about-image img {
-      width: 250px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .about-content {
-      flex: 2 1 400px;
-      animation: fadeIn 1.2s ease;
-    }
-
-    .about-content h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-section {
-      margin-top: 2rem;
-    }
-
-    .about-section h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .about-content p {
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
-
-    .skills-hightlight {
-      margin-top: 2rem;
-    }
-
-    .skills-hightlight h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .skills-grid {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .skill-card {
-      background: white;
-      border-radius: 10px;
-      padding: 1.2rem;
-      max-width: 280px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-    }
-
-    .skill-card img {
-      margin-bottom: 0.8rem;
-      max-width: 64px;
-    }
-
-    .skills {
-      margin-top: 2rem;
-    }
-
-    .skills h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .skills ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .skills li {
-      background: #004466;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.95rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Footer styles */
-    .site-footer {
-      background-color: #004466;
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .footer-links {
-      margin-top: 0.5rem;
-    }
-
-    .footer-links a {
-      color: #a0d8ef;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      font-weight: 600;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        padding: 1rem;
-      }
-
-      .about-content {
-        flex: none;
-        width: 100%;
-      }
-
-      .about-image {
-        flex: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link 
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
 </head>
-<body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="goals.html">Goals</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<body class="about-page">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="goals.html">Goals</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button id="darkToggle" aria-label="Toggle Dark Mode" class="dark-toggle-btn">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="about-container">
-    <div class="about-image">
-      <img src="imgforabout/about.pic.jpg" alt="Emeka Locksley" />
+<section class="about-hero corporate-intro" data-aos="fade-up">
+  <div class="about-hero-inner">
+    <div class="about-image-box">
+      <img src="imgforabout/IT Pic.JPG" alt="Emeka Locksley" class="about-image" />
+    </div>
+    <div class="about-text-box">
+      <h1 class="main-heading">Meet Emeka Locksley</h1>
+      <h3 class="sub-heading">Innovation | Integrity | Impact</h3>
+      <p>
+        I am a passionate and forward-thinking web developer driven by the desire to create meaningful digital experiences.
+        With a strong foundation in design, functionality, and user experience, I transform ideas into functional web
+        solutions that inspire growth, drive engagement, and solve real-world challenges.
+      </p>
+      <p>
+        My work is grounded in curiosity, continuous learning, and a vision to deliver impactful technology, especially
+        in sectors like transport, data, and digital strategy. 
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <section class="what-i-do" data-aos="fade-up">
+      <h2>What I Do</h2>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="flip-up">
+          <i class="fas fa-code"></i>
+          <h3>Frontend Development</h3>
+          <p>I create responsive, user-friendly websites using HTML, CSS, and JavaScript to bring designs to life.</p>
+        </div>
+        <div class="skill-card" data-aos="flip-up" data-aos-delay="100">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Creative Problem Solving</h3>
+          <p>I enjoy solving challenges with code and continuously seek smarter solutions in my workflow.</p>
+        </div>
+        <div class="skill-card" data-aos="flip-up" data-aos-delay="200">
+          <i class="fas fa-chart-line"></i>
+          <h3>Learning & Growth</h3>
+          <p>I’m committed to continuous learning, exploring new tools and improving my craft every day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision-mission" data-aos="fade-up">
+      <div class="vision-box">
+        <h2>Vision</h2>
+        <p>To become a leading force in technology-driven innovation, delivering solutions that transform industries and improve lives — starting with transport, data intelligence, and responsive digital design.</p>
+      </div>
+      <div class="mission-box">
+        <h2>Mission</h2>
+        <p>To build impactful digital tools and experiences that are accessible, efficient, and rooted in problem-solving. I aim to collaborate, grow continuously, and apply modern design and engineering principles to drive meaningful change.</p>
+      </div>
+    </section>
+
+<section class="core-values" data-aos="fade-up">
+  <h2>Core Values</h2>
+  <div class="cv-grid">
+    <div class="cv-card">
+      <div class="cv-inner">
+        <div class="cv-front">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Innovation</h3>
+        </div>
+        <div class="cv-back">
+          <p>We embrace forward-thinking ideas and cutting-edge solutions to drive continuous growth and create lasting value. Our commitment to innovation ensures we stay ahead in a rapidly evolving world.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="about-content">
-      <h1>Hi, I'm Emeka Locksley</h1>
-      <p>
-        I'm a forward-thinking software enthusiast passionate about developing tools that solve real-world problems, particularly in transport and business operations. With a strong drive for innovation, I build web apps, track operational costs, and develop systems that simplify data-driven decisions.
-      </p>
-      <p>
-        My journey is fueled by curiosity and a desire to create purposeful digital experiences.
-      </p>
-
-      <div class="about-section">
-        <h2>About Me</h2>
-        <p>
-          I'm Emeka Locksley, a creative web developer passionate about building responsive, useful software for transport systems, data analysis, and operations management. My goal is to leverage tech to solve real-world problems and deliver functional, data-driven tools.
-        </p>
-      </div>
-
-      <section class="skills-hightlight">
-        <h2>What I Do</h2>
-        <div class="skills-grid">
-          <div class="skill-card" data-aos="flip-up">
-            <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/transport.png" alt="Transport Tech" />
-            <h3>Transport Tech</h3>
-            <p>I build apps that simplify logistics, reduce cost, and improve movement efficiency.</p>
-          </div>
-          <div class="skill-card" data-aos="flip-up">
-            <img src="https://img.icons8.com/ios-filled/64/source-code.png" alt="Web Apps" />
-            <h3>Web Apps</h3>
-            <p>Responsive, modern applications with real business utility and clean user interfaces.</p>
-          </div>
-          <div class="skill-card" data-aos="flip-up">
-            <img src="https://img.icons8.com/ios/50/combo-chart--v1.png" alt="Data Strategy" />
-            <h3>Data Strategy</h3>
-            <p>Transforming transport data into insights that help teams make better decisions.</p>
-          </div>
+    <div class="cv-card">
+      <div class="cv-inner">
+        <div class="cv-front">
+          <i class="fas fa-handshake"></i>
+          <h3>Integrity</h3>
         </div>
-      </section>
+        <div class="cv-back">
+          <p>Honesty, transparency, and ethical conduct guide every decision we make. We build trust through accountability and respect in all our relationships and business practices.</p>
+        </div>
+      </div>
+    </div>
 
-      <div class="skills">
-        <h2>Skills & Tools</h2>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Responsive Design</li>
-          <li>Git & GitHub</li>
-          <li>UI/UX Principles</li>
-          <li>Project Planning</li>
-        </ul>
+    <div class="cv-card">
+      <div class="cv-inner">
+        <div class="cv-front">
+          <i class="fas fa-award"></i>
+          <h3>Excellence</h3>
+        </div>
+        <div class="cv-back">
+          <p>We pursue the highest standards in everything we do, delivering superior quality and exceptional results. Excellence is our hallmark, reflected in our dedication and professionalism.</p>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- AOS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  </script>
 
-  <footer class="site-footer">
-    <div class="footer-content">
+
+    <section class="about-intro" data-aos="fade-up">
+      <div class="intro-content">
+        <h2>Who I Am</h2>
+        <p>
+          I’m Emeka Locksley, a driven and solution-focused web developer with a passion for transforming ideas into practical, user-friendly digital experiences.
+          My mission is to contribute to industries through technology, professionalism, and continuous improvement.
+        </p>
+        <p>
+          With a growing portfolio and collaborative experience, I believe in creating long-term value and driving results through modern design and code.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills-highlight" data-aos="fade-up">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Responsive Web Design</li>
+        <li>Git & GitHub</li>
+        <li>Modern UI/UX Principles</li>
+        <li>Dark Mode Integration</li>
+        <li>Clean Semantic Code</li>
+      </ul>
+    </section>
+
+<section class="core-values" data-aos="fade-up">
+  <h2>Core Values</h2>
+  <ul class="values-list">
+    <li><strong>Integrity:</strong> Committed to honest, transparent practices in every engagement.</li>
+    <li><strong>Excellence:</strong> Striving to exceed expectations with quality work and attention to detail.</li>
+    <li><strong>Growth:</strong> Always learning and adapting to new trends, tools, and user needs.</li>
+    <li><strong>Innovation:</strong> Finding creative ways to solve problems and deliver value.</li>
+    <li><strong>Collaboration:</strong> Working well with others to produce better outcomes.</li>
+  </ul>
+</section>
+
+
+<section class="professional-timeline" data-aos="fade-up">
+  <h2>Professional Timeline</h2>
+  <div class="timeline-container">
+    <div class="timeline-block">
+      <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+      <div class="timeline-content">
+        <h3>2024 – Present</h3>
+        <p>Began web development journey. Built personal website, styled pages with animation and dark mode features.</p>
+      </div>
+    </div>
+    <div class="timeline-block">
+      <div class="timeline-icon"><i class="fas fa-pencil-ruler"></i></div>
+      <div class="timeline-content">
+        <h3>2025</h3>
+        <p>Worked on UI/UX-focused projects to improve user experience, responsiveness, and layout precision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials" data-aos="fade-up">
+  <h2 class="section-title">Testimonials</h2>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide testimonial-card">
+        <p>"Emeka is focused, passionate, and always eager to learn. Working with him has been a pleasure!"</p>
+        <cite>– Collaborator</cite>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <p>"His ability to combine design and functionality is impressive. Definitely someone to watch in tech."</p>
+        <cite>– Mentor</cite>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <p>"Emeka delivers clean, efficient code with user experience in mind. Reliable and professional."</p>
+        <cite>– Client</cite>
+      </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+    <section class="call-to-action" data-aos="zoom-in">
+      <h2>Want to Work Together?</h2>
+      <p>Let’s collaborate to build something impactful. Check out my <a href="projects.html">projects</a> or <a href="contact.html">get in touch</a>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+   <footer class="site-footer">
+    <div class="footer-graph-container">
+      <div class="footer-box">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="fleet-tracker.html">Fleet Tracker</a></li>
+          <li><a href="#">Vehicle Reports</a></li>
+          <li><a href="#">Driver Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="goals.html">Visions & Goals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Portfolio</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Demo Showcase</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Connects</h4>
+        <ul>
+          <li><a href="mailto:emekalocksley@gmail.com">Email</a></li>
+          <li><a href="https://github.com/llillocksley" target="_blank">GitHub</a></li>
+          <li><a href="https://wa.me/+2348139222806" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-box social-box">
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+          <a href="https://twitter.com/llillocksley" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/lillocksley" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/Emeka Goodness Locksley" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="http://web.whatsapp.com/+2348139222806" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="http://pinterest.com/lillocksley" target="_blank" aria-label="Pinterest">
+            <i class="fab fa-pinterest"></i>
+          </a> 
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
       <p>&copy; 2025 Emeka Locksley. All rights reserved.</p>
       <p>Built with 💻, passion, and continuous learning.</p>
     </div>
-    <div class="footer-links">
-      <a href="mailto:emekalocksley@gmail.com">Email</a> |
-      <a href="https://github.com/llillocksley" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </footer>
-  
+   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const toggleBtn = document.getElementById("darkToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
 </body>
 </html>
