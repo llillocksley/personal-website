@@ -101,6 +101,24 @@
   </div>
 </section>
 
+<section class="stats-section" data-aos="fade-up">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <h3><span class="counter" data-target="1200">0</span>+</h3>
+      <p>Cost Logs Tracked</p>
+    </div>
+    <div class="stat-item">
+      <h3><span class="counter" data-target="98">0</span>%</h3>
+      <p>Tracking Accuracy</p>
+    </div>
+    <div class="stat-item">
+      <h3><span class="counter" data-target="250">0</span></h3>
+      <p>Fleet Profiles Managed</p>
+    </div>
+  </div>
+</section>
+
+
 <!-- Feature Highlights Section -->
 <section class="cost-features" data-aos="fade-up">
   <div class="container">
@@ -227,7 +245,7 @@
           <a href="https://instagram.com/lillocksley" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://linkedin.com/in/Emeka Goodness Locksley" target="_blank" aria-label="LinkedIn">
+          <a href="https://linkedin.com/in/Emeka-Goodness-Locksley" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="http://web.whatsapp.com/+2348139222806" target="_blank" aria-label="WhatsApp">
@@ -259,6 +277,41 @@
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script>
+  const backToTop = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+</script>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 100;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 25);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+</script>
+
+
+
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
 
 </body>
 </html>
